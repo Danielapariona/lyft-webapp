@@ -15,7 +15,7 @@
   <main>
     <section>
       <div class="container">
-        <form action="" class="form">
+        <form action="" class="form" id="signup">
           <div class="flex">
             <figure class="content-icon">
               <a href="../index.html">
@@ -39,11 +39,11 @@
               </select>
             </div>
             <div class="border">
-              <input type="text" id="input-phone" class="input-disable">
+              <input type="text" id="input-phone" class="input-disable" maxlength="10">
             </div>
           </div>
           <p class="text-center">We'll send a text to verify your phone</p>
-          <a href="#" class="button btn-disabled btn-block text-center text-uppercase" id="next">Next</a>
+          <button href="#" class="button btn-disabled btn-block text-center text-uppercase" id="next" type="submit" disabled>Next</button>
         </form>
       </div>
     </section>
