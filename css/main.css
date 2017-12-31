@@ -13,19 +13,18 @@
 
 body {
   background: #eee;
-  font-family: Gotham SSm A, Gotham SSm B, HelveticaNeue, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 
 /* Mis clases */
 
 .container {
-  height: 100vh;
-  max-width: 600px;
+  max-width: 500px;
   min-width: 450px;
   margin: auto;
   padding: 20px;
-  background-color: pink;
+  background-color: #fff;
   height: 100vh;
 }
 
@@ -42,4 +41,41 @@ body {
 
 .content-img img {
   max-width: 68%;
+}
+
+.background-signup {
+  background-image: url(../assets/images/background-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  background-position: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.center-x {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.button {
+  border: 1px solid #fff;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 5px;
+  line-height: 1.5;
 }
