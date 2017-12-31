@@ -115,14 +115,18 @@ body {
   padding: 10px 20px;
 }
 
-.content-input {
-  border-bottom: 1px solid #bcbcbc;
-  padding: 5px 0;
-}
-
 input {
   border: none;
   outline: none;
+  width: 100%;
+}
+
+.input-disable {
+  border-bottom: 1.5px solid #bcbcbc;
+}
+
+.input-active {
+  border-bottom: 1.5px solid #3dc73d;
 }
 
 .select-flag {
@@ -167,3 +171,4 @@ input {
 .vh-100 {
   height: 100vh;
 }
+

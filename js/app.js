@@ -1,15 +1,17 @@
 $(document).ready(function () {
   //Eventos
   $(window).on('load', viewSplash);
-  $('#input-text').on('input', validatePhone);
+  $('#input-phone').on('input', validatePhone);
   $('#next').on('click', showCode);
 });
 
 function validatePhone() {
   if ($(this).val().trim().length === 10) {
+    $('#input-phone').removeClass('input-disable').addClass('input-active');
     $('#next').removeClass('btn-disabled').addClass('btn-active');
   } else {
-    $('#next').removeClass('btn-active').addClass('btn-disabled')
+    $('#input-phone').removeClass('input-active').addClass('input-disable');
+    $('#next').removeClass('btn-active').addClass('btn-disabled');
   }
 }
 
@@ -33,4 +35,3 @@ function showCode() {
     location.href = 'phoneNumber.html'
   }
 }
-
