@@ -11,8 +11,6 @@ $(document).ready(function () {
   $('#sign-up #name').on('input', validateData);
   $('#sign-up #last-name').on('input', validateData);
   $('#sign-up #email').on('input', validateEmail);
-  $('#sign-up button').on('click', validateForm);
-
 });
 
 function viewSplash() {
