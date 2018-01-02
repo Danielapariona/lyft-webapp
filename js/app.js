@@ -18,7 +18,7 @@ $(document).ready(function () {
 
 function viewSplash() {
   setTimeout(function () {
-    $('.loader-wrap').fadeOut(500);
+    $('.loader-wrap-js').fadeOut(500);
   }, 1000);
 }
 
