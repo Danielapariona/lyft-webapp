@@ -14,6 +14,7 @@ $(document).ready(function () {
   $('#sign-up #name').on('input', validateData);
   $('#sign-up #last-name').on('input', validateData);
   $('#sign-up #email').on('input', validateEmail);
+  $('#sign-up button').on('click', validaForm);
 });
 
 function viewSplash() {
@@ -80,4 +81,9 @@ function validateEmail() {
   if (isFullField($(this))) {
     PATERNEMAIL.test($(this).val()) ? $(this).addClass('correct-data') : $(this).removeClass('correct-data');
   }
+}
+
+function validaForm() {
+  e.preventDefault();
+  location.href = 'done.html';
 }
