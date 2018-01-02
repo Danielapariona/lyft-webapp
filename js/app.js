@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(window).on('load', viewSplash);
   $('#input-phone').on('input', validatePhone);
   $('#signup button').on('click', showCode);
-  
+
 
   // Formulario de verificación de código
   $('#resend-code').on('click', resendCode);
@@ -14,7 +14,7 @@ $(document).ready(function () {
   $('#sign-up #name').on('input', validateData);
   $('#sign-up #last-name').on('input', validateData);
   $('#sign-up #email').on('input', validateEmail);
-  $('#sign-up button').on('click', validaForm);
+  $('#sign-up button').on('click', validateForm);
 });
 
 function viewSplash() {
@@ -76,14 +76,26 @@ function isFullField(name) {
   return name.val() !== '' ? true : false;
 }
 
-function validateEmail() {
+function isEmail(email) {
   var PATERNEMAIL = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
-  if (isFullField($(this))) {
-    PATERNEMAIL.test($(this).val()) ? $(this).addClass('correct-data') : $(this).removeClass('correct-data');
-  }
+  return PATERNEMAIL.test(email.val()) ? true : false;
 }
 
-function validaForm() {
-  e.preventDefault();
-  location.href = 'done.html';
+function validateEmail() {
+  isEmail($(this)) ? $(this).addClass('correct-data') : $(this).removeClass('correct-data');
 }
+
+
+function validateForm(e) {
+  e.preventDefault();
+
+  if (isFullField($('#sign-up #name')) && isFullField($('#sign-up #last-name')) && isEmail($('#sign-up #email')) && $('#cbox1').prop('checked')) {
+    location.href = 'done.html';
+  } else {
+    alert('Debe llenar todos los campos');
+  }
+
+  //location.href = 'done.html';
+}
+
+var x = $('#sign-up button')
