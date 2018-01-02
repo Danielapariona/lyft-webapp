@@ -3,9 +3,12 @@ $(document).ready(function () {
   $(window).on('load', viewSplash);
   $('#input-phone').on('input', validatePhone);
   $('#signup button').on('click', showCode);
+  
+
+  // Formulario de verificación de código
   $('#resend-code').on('click', resendCode);
   $('#verify-number #code').on('input', verifyPhone);
-  
+  $('#verify-number button').on('click', form);
 
   // Formulario Sign Up
   $('#sign-up #name').on('input', validateData);
@@ -65,7 +68,7 @@ function form(e) {
 }
 
 function validateData(data) {
-  isFullField($(this))? $(this).addClass('correct-data') :  $(this).removeClass('correct-data');
+  isFullField($(this)) ? $(this).addClass('correct-data') : $(this).removeClass('correct-data');
 }
 
 function isFullField(name) {
@@ -74,8 +77,7 @@ function isFullField(name) {
 
 function validateEmail() {
   var PATERNEMAIL = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
-  if(isFullField($(this))) {
-    PATERNEMAIL.test($(this).val()) ? $(this).addClass('correct-data') : $(this).removeClass('correct-data'); 
+  if (isFullField($(this))) {
+    PATERNEMAIL.test($(this).val()) ? $(this).addClass('correct-data') : $(this).removeClass('correct-data');
   }
 }
-
