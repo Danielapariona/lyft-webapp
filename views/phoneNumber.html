@@ -14,33 +14,30 @@
 <body>
   <main>
     <section>
-      <div class="container">
-        <form action="" class="form vh-100 pos-relative" id="verify-number">
-          <div class="flex">
-            <figure class="content-icon">
-              <a href="../index.html">
-                <img src="../assets/icon/back-arrow.png" alt="" class="icon back-arrow">
-              </a>
-            </figure>
-            <h3 class="title">Verify phone number</h3>
-          </div>
+      <div class="container pos-relative">
+        <div class="flex">
+          <figure class="content-icon">
+            <a href="signup.html">
+              <img src="../assets/icon/back-arrow.png" alt="" class="icon back-arrow">
+            </a>
+          </figure>
+          <h3 class="title">Verify phone number</h3>
+        </div>
+        <div class="text-center">
+          <p class="text-center content-text">Join now for free ride credit</p>
+        </div>
+        <form action="" class="form " id="verify-number">
           <div class="text-center">
-            <div class="content-text text-center">
-              <span>Join now for free ride credit</span>
-            </div>
-            <div>
-              <p>
-                <strong>LAB-</strong>
-                <input type="text" class="code" value="" id="code" maxlength="3">
-              </p>
-            </div>
+            <span>
+              <strong>LAB-</strong>
+            </span>
+            <input type="text" class="code" value="" id="code" maxlength="3">
             <p>Enter the code sent to
               <span>+52</span>
             </p>
             <a href="#" class="button btn-disabled text-center btn-small" id="resend-code">Resend code</a>
           </div>
-
-          <button class="button btn-disabled text-center text-uppercase position-bottom" id="next" disabled>Next</button>
+          <button class="button btn-disabled btn-block text-center text-uppercase position-bottom" id="next" type="submit" disabled>Next</button>
         </form>
       </div>
     </section>

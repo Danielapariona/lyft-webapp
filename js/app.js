@@ -4,8 +4,15 @@ $(document).ready(function () {
   $('#input-phone').on('input', validatePhone);
   $('#signup button').on('click', showCode);
   $('#resend-code').on('click', resendCode);
-  $('#code').on('input', verifyPhone);
-  $('#verify-number button').on('click', form);
+  $('#verify-number #code').on('input', verifyPhone);
+  
+
+  // Formulario Sign Up
+  $('#sign-up #name').on('input', validateData);
+  $('#sign-up #last-name').on('input', validateData);
+  $('#sign-up #email').on('input', validateEmail);
+  $('#sign-up button').on('click', validateForm);
+
 });
 
 function viewSplash() {
@@ -54,5 +61,23 @@ function verifyPhone() {
 
 function form(e) {
   e.preventDefault();
-  location.href = 'form.html'
+  if ($('#verify-number #code').val().length == 3) {
+    location.href = 'form.html'
+  }
 }
+
+function validateData(data) {
+  isFullField($(this))? $(this).addClass('correct-data') :  $(this).removeClass('correct-data');
+}
+
+function isFullField(name) {
+  return name.val() !== '' ? true : false;
+}
+
+function validateEmail() {
+  var PATERNEMAIL = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+  if(isFullField($(this))) {
+    PATERNEMAIL.test($(this).val()) ? $(this).addClass('correct-data') : $(this).removeClass('correct-data'); 
+  }
+}
+

@@ -1,36 +1,44 @@
 <!-- Preloader Start -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../css/preloading.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/main.css">
 </head>
-
 <body>
   <main>
     <section>
-      <div class="container">
-        <form action="" class="form vh-100 pos-relative">
-          <div class="flex">
-            <figure class="content-icon">
-              <a href="../index.html">
-                <img src="../assets/icon/back-arrow.png" alt="" class="icon back-arrow">
-              </a>
-            </figure>
-            <h3 class="title">Sign up</h3>
+      <div class="container pos-relative">
+        <div class="flex">
+          <figure class="content-icon">
+            <a href="phoneNumber.html">
+              <img src="../assets/icon/back-arrow.png" alt="" class="icon back-arrow">
+            </a>
+          </figure>
+          <h3 class="title">Sign up</h3>
+        </div>
+        <p class="text-center content-text">Join now for free ride credit</p>
+        <form action="done.html" method="post" class="form " id="sign-up">
+          <div class="two-input">
+            <label id="icon" for="name">
+              <i class="fa fa-user-o" aria-hidden="true"></i>
+            </label>
+            <input type="text" name="name" id="name" placeholder="First name" required/>
+            <input type="text" name="last-name" id="last-name" placeholder="Last name" required/>
           </div>
-          <div class="text-center">
-            <div class="content-text text-center">
-              <span>Join now for free ride credit</span>
-            </div>
+          <div class="one-input">
+            <label id="icon" for="name">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </label>
+            <input type="email" name="email" id="email" placeholder="Email" required/>
           </div>
-
-          <button href="#" class="button btn-disabled text-center text-uppercase position-bottom" class="next">Next</button>
+          <label class="checkbox"><input type="checkbox" id="cbox1" value="first_checkbox"required>I agree to lyft's  <span class="blue">Terms of service</span></label>
+          <button class="button btn-active btn-block text-center text-uppercase position-bottom" id="next" type="submit">Next</button>
         </form>
       </div>
     </section>

@@ -25,6 +25,7 @@ body {
   margin: auto;
   background-color: #fff;
   height: 100vh;
+  padding: 20px;
 }
 
 .container:before,
@@ -73,15 +74,17 @@ body {
 
 .button {
   cursor: pointer;
-  padding: 15px 25px;
+  padding: 9px 26px;
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
   margin-right: 5px;
   line-height: 1.5;
   border-radius: 3px;
-  margin-top: 30px;  
+  margin-top: 30px;
   box-shadow: 1px 1px 6px grey;
+  border-style: none;
+  outline: none;
 }
 
 button {
@@ -163,10 +166,6 @@ input {
   color: #fff;
 }
 
-.form {
-  padding: 20px;
-}
-
 .btn-disabled {
   background-color: #d6d4d4;
   color: gray;
@@ -193,7 +192,7 @@ input {
 .position-bottom {
   bottom: 50px;
   position: absolute;
-  width: 91%;
+  width: 81%;
 }
 
 .pos-relative {
@@ -213,3 +212,56 @@ input.code {
   letter-spacing: 3px;
 }
 
+
+.form {
+  padding: 20px;
+}
+
+form#sign-up input {
+  padding: 0px 10px;
+}
+
+div > label {
+  border: 1px solid #cbc9c9;
+  padding: 8px;
+  border-radius: 5px 0 0 5px;
+}
+
+.form div {
+  margin: 15px 0;
+}
+
+.two-input, .one-input {
+  display: flex;
+}
+
+.two-input input:nth-child(2) {
+  border-top: 1px solid #cbc9c9;
+  border-right: 1px solid #ebeaea;
+  border-bottom: 1px solid #cbc9c9;
+}
+
+.one-input input, .two-input input:nth-child(3) {
+  border-radius: 0 5px 5px 0;
+  border-top: 1px solid #cbc9c9;
+  border-right: 1px solid #cbc9c9;
+  border-bottom: 1px solid #cbc9c9;
+}
+
+.one-input input {
+  border-right: 1px solid #cbc9c9;
+}
+
+.checkbox input{
+  width: inherit;
+  margin-right: 13px;
+}
+
+span.blue {
+  color: #5d95c5;
+  font-weight: 600;
+}
+
+.correct-data {
+  border-bottom: 1px solid #3dc73d !important; 
+}
